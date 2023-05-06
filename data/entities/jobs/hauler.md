@@ -8,20 +8,17 @@
 | | |
 | | |
 | | |
-| HaulerZombieWorkerSetNbtHaul0TaskVariables | Sets the NBT variables for hauling task 0 |
-| HaulerZombieWorkerSetNbtHaul1TaskVariables | Sets the NBT variables for hauling task 1 |
-| HaulerZombieWorkerSetNbtHaul2TaskVariables | Sets the NBT variables for hauling task 2 |
-| HaulerZombieWorkerSetNbtHaul3TaskVariables | Sets the NBT variables for hauling task 3 |
-| HaulerZombieWorkerSetNbtHaul4TaskVariables | Sets the NBT variables for hauling task 4 |
-| HaulerZombieWorkerSetNbtHaul5TaskVariables | Sets the NBT variables for hauling task 5 |
-| HaulerZombieWorkerSetNbtHaul6TaskVariables | Sets the NBT variables for hauling task 6 |
-| HaulerZombieWorkerSetNbtHaul7TaskVariables | Sets the NBT variables for hauling task 7 |
-| HaulerZombieWorkerSetNbtHaul8TaskVariables | Sets the NBT variables for hauling task 8 |
+| HaulerZombieWorkerSetNbtTaskVariables | Sets the NBT variables from the config file |
+| HaulerZombieWorkerGoToStart | Runs the start position script |
+| HaulerZombieWorkerGoToEnd | Runs the end psition script | 
 
 ## Forge NBT
 | Name | Use |
 | --- | --- |
 | minethrallsEntityID | Used for storing tasks for entities |
+| minethrallsXp | Used for storing experience |
+| minethrallsStartInvSize | The start block inventory size of containers |
+| minethrallsEndInvSize | The end block inventory size of containers |
 | minethrallsStartItem | The item to collect at the start position |
 | minethrallsEndItem | The item to store at the end position |
 | minethrallsEndTask | The task to preform once the current task is complete |
@@ -32,21 +29,61 @@
 | minethrallsEndPosX | The X position for the end block |
 | minethrallsEndPosY | The Y position for the end block |
 | minethrallsEndPosZ | The Z position for the end block |
+| minethrallsEndCmd | A command to run once the task is complete. |
+| minethrallsFailCmd | A command to run when the task fails |
+| minethrallsEndXp | The amount of XP to give the entity once the task is complete |
+| minethrallsFailXp | The amount of XP to give the entity if the task fails |
 | minethrallsGoToStart | Tells the entity to go to the start position |
 | minethrallsGoToEnd | Tells the entity to go to the end position |
+
+## Commands
+- Owner: The player that tamed the entity.
+- Owner Limited: Owner but has limited access.
+- Admin: A player with OP command permission level.
+
+| Command | SubCommand | Permission Level |
+| --- | --- | --- |
+| Debug | | Admin Level 2 |
+| mapProfileName | | Admin Level 2 |
+| task | entity/hauler/continue | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/startSlotSize/startSlotSize | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/endSlotSize/endSlotSize | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/endXp/endXp | Admin Level 2 |
+| task | entity/hauler/set/taskFile/failXp/failXp | Admin Level 2 |
+| task | entity/hauler/set/taskFile/endTask/endTask | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/failTask/failTask | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/startPos/startPos | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/endPos/endPos | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/startBlock/startBlock | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/endBlock/endBlock | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/startItem/startItem | Owner/Admin Level 2 |
+| task | entity/hauler/set/taskFile/endItem/endItem | Owner/Admin Level 2 |
+| task | entity/hauler/start/startTask | Owner/Admin Level 2 |
+| task | entity/hauler/pause | Owner/Admin Level 2 |
 
 ## Config
 ### Hauler Tasks
 Task Location: "/config/minethralls/entities/zombies/workers/{minethrallsEntityID}/jobs/haul/#.json"
 | Name | Use | Example |
 | --- | --- | --- |
-| start_item | The item registry for the start item |  |
-| end_item | The item registry for the end item |  |
-| end_task | The task to preform if the task completes | haul.0 |
-| fail_task | The task to preform if the task failed | haul.8 |
-| start_pos_x | The X position of the start block. |  |
-| start_pos_y | The Y position of the start block. |  |
-| start_pos_z | The Z position of the start block. |  |
-| end_pos_x | The X position for the end block. |  |
-| end_pos_y | The Y position for the end block. |  |
-| end_pos_z | The Z position for the end block. |  |
+| start_item | The item registry for the start item | minecraft:cobblestone |
+| end_item | The item registry for the end item | minecraft:cobblestone |
+| start_block | The block registry for the start block | minecraft:chest |
+| end_block | The block registry for the end block | minecraft:chest |
+| end_task | The task to preform if the task completes | 1 |
+| fail_task | The task to preform if the task failed | 0 |
+| end_cmd | When the task fails it will run a allowed command | /msg NorthWestTrees Hello World! |
+| fail_cmd | When the task fails it will run a allowed command | /msg NorthWestTrees Goodbye World! |
+| start_inventory_size | The amount of slots the start container block has | 27 |
+| end_inventory_size | The amount of slots the end container block has | 9 |
+| start_pos_x | The X position of the start block. | 100 |
+| start_pos_y | The Y position of the start block. | 64 |
+| start_pos_z | The Z position of the start block. | -100 |
+| end_pos_x | The X position for the end block. | 90 |
+| end_pos_y | The Y position for the end block. | 64 |
+| end_pos_z | The Z position for the end block. | -100 |
+
+### Commands.txt
+- A list of allowed commands can be used when a task is completed or failed.
+- One command per line
+- All commands are checked before adding to the entity if it contains the same start string.
