@@ -43,23 +43,23 @@
 
 | Command | SubCommand | Permission Level |
 | --- | --- | --- |
-| Debug | | Admin Level 2 |
-| mapProfileName | | Admin Level 2 |
-| task | entity/hauler/continue | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/startSlotSize/startSlotSize | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/endSlotSize/endSlotSize | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/endXp/endXp | Admin Level 2 |
-| task | entity/hauler/set/taskFile/failXp/failXp | Admin Level 2 |
-| task | entity/hauler/set/taskFile/endTask/endTask | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/failTask/failTask | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/startPos/startPos | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/endPos/endPos | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/startBlock/startBlock | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/endBlock/endBlock | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/startItem/startItem | Owner/Admin Level 2 |
-| task | entity/hauler/set/taskFile/endItem/endItem | Owner/Admin Level 2 |
-| task | entity/hauler/start/startTask | Owner/Admin Level 2 |
-| task | entity/hauler/pause | Owner/Admin Level 2 |
+| Debug | useDebug | Admin Level 2 |
+| mapProfileName | mapProfileName | Admin Level 2 |
+| task | continue/entity | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/startSlotSize/startSlotSize | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/endSlotSize/endSlotSize | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/endXp/endXp | Admin Level 2 |
+| task | set/entity/taskFile/hauler/failXp/failXp | Admin Level 2 |
+| task | set/entity/taskFile/hauler/endTask/endTask | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/failTask/failTask | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/startPos/startPos | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/endPos/endPos | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/startBlock/startBlock | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/endBlock/endBlock | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/startItem/startItem | Owner/Admin Level 2 |
+| task | set/entity/taskFile/hauler/endItem/endItem | Owner/Admin Level 2 |
+| task | start/entity/startTask | Owner/Admin Level 2 |
+| task | pause/entity | Owner/Admin Level 2 |
 
 ## Config
 ### Hauler Tasks
