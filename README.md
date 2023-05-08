@@ -6,8 +6,8 @@ Inspired by game mechanics from Graveyard Keeper.
 # Wiki
 | | | | | |
 | --- | --- | --- | --- | --- |
-| AI | Blocks | Commands | Entities | GUIs |
-| Items | Mechanics | Tags | Tasks | |
+| 🤖 [AI Tasks](https://github.com/northwesttrees-gaming/MineThralls/wiki/AI-Tasks) | 🧱 [Blocks](https://github.com/northwesttrees-gaming/MineThralls/wiki/Blocks) | 💬 [Commands](https://github.com/northwesttrees-gaming/MineThralls/wiki/Commands) | 👽 [Entities](https://github.com/northwesttrees-gaming/MineThralls/wiki/Entities) | 🖥 [GUIs](https://github.com/northwesttrees-gaming/MineThralls/wiki/GUIs)
+| ✏ [Items](https://github.com/northwesttrees-gaming/MineThralls/wiki/Items) | ⚙ [Mechanics](https://github.com/northwesttrees-gaming/MineThralls/wiki/Mechanics) | 💼 [Professions](https://github.com/northwesttrees-gaming/MineThralls/wiki/Professions) | 🧪[Research](https://github.com/northwesttrees-gaming/MineThralls/wiki/Research) | 🏷 [Tags](https://github.com/northwesttrees-gaming/MineThralls/wiki/Tags) |
 
 # License
 Read our modification [license]() agreement before installing downloading the modification.  
