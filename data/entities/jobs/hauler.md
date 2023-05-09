@@ -22,6 +22,8 @@
 | minethrallsXp | Used for storing experience |
 | minethrallsStartInvSize | The start block inventory size of containers |
 | minethrallsEndInvSize | The end block inventory size of containers |
+| minethrallsStartBlockName | The start blocks NBT value is stored here |
+| minethrallsEndBlockName | The end blocks NBT value is stored here |
 | minethrallsStartItem | The item to collect at the start position |
 | minethrallsEndItem | The item to store at the end position |
 | minethrallsEndTask | The task to preform once the current task is complete |
@@ -48,6 +50,7 @@
 | --- | --- | --- |
 | Debug | useDebug | Admin Level 2 |
 | mapProfileName | mapProfileName | Admin Level 2 |
+| nameBlock | blockPos/blockName | Amyone |
 | task | continue/entity | Owner/Admin Level 2 |
 | task | set/entity/taskFile/hauler/startSlotSize/startSlotSize | Owner/Admin Level 2 |
 | task | set/entity/taskFile/hauler/endSlotSize/endSlotSize | Owner/Admin Level 2 |
@@ -72,6 +75,8 @@ Task Location: "/config/minethralls/entities/zombies/workers/{minethrallsEntityI
 | start_item | The item registry for the start item | minecraft:cobblestone |
 | end_item | The item registry for the end item | minecraft:cobblestone |
 | start_block | The block registry for the start block | minecraft:chest |
+| start_block_name | The block NBT value for the start block name | Cobblestone1 |
+| end_block_name | The block NBT value for the end block name | Cobblestone1 |
 | end_block | The block registry for the end block | minecraft:chest |
 | end_task | The task to preform if the task completes | 1 |
 | fail_task | The task to preform if the task failed | 0 |
